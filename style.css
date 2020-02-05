@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Stripy Reg';
+    src: url('./fonts/StripyReg-eGyl.ttf') format('truetype');
+}
+
+/* general layout */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+#allSections {
+    height: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* homepage */
+
+#homepage {
+    height: 100%;
+    background: url("./images/main_filter.png") center no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:-10
+
+}
+
+header {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 29px 30px;
+    z-index: 1;
+}
+
+header:hover ~ #homepage {
+    background-image: url('./images/childeren3.png');
+    transition: 2s;
+}
+
+#letters {
+    padding-top: 50px;
+    width: 60%;
+}
+
+.letter {
+    font-family: 'Stripy Reg';
+    font-weight: normal;
+    font-size: 16em;
+    color: white; 
+    margin: 0px 82px;
+}
+
+.p {
+    display: flex;
+}
+
+#s2 {
+    text-align: end;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* arrow */
+
+.bottomArrow {
+    height: 10px;
+    width: 80%;
+    position: fixed;
+    bottom: 20px;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    animation: bounce 2s infinite;
+} 
+
+@keyframes bounce {
+    10% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(5px);
+    }
+    30% {
+        transform: translateY(0px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+}
+
+/* hamburger and nav */
+
+#hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.topBar,
+.middleBar,
+.bottomBar {
+    border-top: solid 2px #fff;
+    width: 26px;
+    height: 6px;
+    margin-right: 10px;
+}
+
+.topBar,
+.bottomBar {
+transition: all 0.5s;
+}
+
+.middleBar {
+transition: none;
+}
+
+#hamburger > .nav:hover  .topBar {
+    transform: rotateZ(-405deg) translate(10px, 8px);
+    color: #222;
+    border-top: solid 3px white;
+}
+
+#hamburger > .nav:hover  .middleBar {
+    visibility: hidden;
+    border-top: solid 3px white;
+}
+
+#hamburger > .nav:hover  .bottomBar {
+    transform: rotateZ(403deg) translate(-6px, -20px);
+    color: #222;
+    border-top: solid 3px white;
+}
+
+.nav {
+    padding: 20px;
+    z-index: 2; 
+    position: fixed;
+    /* so that it stays as an X when the menu slides in */
+}
+            
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+.menu {
+    position: absolute;
+    background-color: rgba(17, 16, 16, 0.7);
+    width: 469px;
+    height: 101vh;
+    visibility: hidden;
+}
+
+
+#hamburger > div.nav:hover ~ .menu {
+    top: -29px;
+    right: -30px;
+    animation: slideIn 2s;
+    visibility: visible;
+}
+
+.menu:hover {
+    top: -29px;
+    right: -30px;
+    animation: slideIn 2s;
+    visibility: visible;
+}
+
+
+@keyframes slideIn {
+    0% {
+        top: -29px;
+        right: -300px;
+    }
+    100% {
+        top: -29px;
+        right: -30px;
+    }   
+}
+
+
+.menuItem {
+    padding: 43px 20px 10px 20px;
+    width: 70%;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;    
+}
+
+#divider {
+    border-bottom: 1px solid white;
+    width: 1px;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+
+/* page 1 */
+
+#pages {
+    position: absolute;
+    top: 900px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(240, 244, 245, 0.7)
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+#logo img {
+    height: 120px;
+}
+
+
+
+
+
+
+
