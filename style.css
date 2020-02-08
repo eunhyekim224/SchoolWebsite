@@ -3,6 +3,12 @@
     src: url('./fonts/StripyReg-eGyl.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Verlag';
+    src: url('./fonts/Verlag-Font/Verlag-Light.ttf') 
+    format('truetype');
+}
+
 /* general layout */
 
 html {
@@ -35,8 +41,6 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index:-10
-
 }
 
 header {
@@ -153,7 +157,7 @@ transition: none;
 .nav {
     padding: 20px;
     z-index: 2; 
-    position: fixed;
+    position: absolute;
     /* so that it stays as an X when the menu slides in */
 }
             
@@ -222,22 +226,75 @@ transition: none;
     position: absolute;
     top: 900px;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     background-color: rgba(240, 244, 245, 0.7)
 }
 
 .page {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
 }
 
+#logo {
+    margin: 0;
+    padding: 0px 40px;
+    height: 15%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
 
+#logo div {
+    padding-top: 30px;
+    float: left;
+}
 
+#logo p {
+    color: rgb(20, 20, 82);
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 5px;
+    clear: both;
+    padding: 12px 30px;
+}
 
 #logo img {
-    height: 120px;
+    height: 77px;
+}
+
+#flexPage1 {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.mainText {
+    background-color: white;
+    color: black;
+}
+
+#pages h1 {
+    font-size: 3em;
+    color: rgb(20, 20, 82);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 5px;
+    /* font-weight: lighter; */
+
+}
+
+#pages h2 {
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: lighter;
+    color: rgb(20, 20, 82);
+}
+
+.mainText p {
+    font-family: 'Verlag', arial;
+    font-size: 1.3em;
+    line-height: 50px;
 }
 
 
