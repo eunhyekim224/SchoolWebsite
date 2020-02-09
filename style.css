@@ -239,7 +239,7 @@ transition: none;
 
 #logo {
     margin: 0;
-    padding: 0px 40px;
+    padding: 0px 153px;
     height: 15%;
     display: flex;
     flex-direction: row-reverse;
@@ -264,11 +264,6 @@ transition: none;
     height: 77px;
 }
 
-#flexPage1 {
-    display: flex;
-    flex-flow: row wrap;
-}
-
 .mainText {
     background-color: white;
     color: black;
@@ -280,8 +275,6 @@ transition: none;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin: 5px;
-    /* font-weight: lighter; */
-
 }
 
 #pages h2 {
@@ -297,9 +290,103 @@ transition: none;
     line-height: 50px;
 }
 
+.mainText p, .mainText h1, .mainText h2 {
+    padding: 0 14px;
+}
 
+#flexPage1 {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    padding-left: 10%;
+    height: 85%;
+}
 
+#page2, #page3 {
+    width: 80%;
+    padding-left:10%;
+}
 
+#page1 .mainText {
+    width: 50%;
+    height: 100vh;
+}
 
+#flex2Page1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
 
+#sportsImg {
+    width: 100%;
+    height: 70%;
+    background: url(./images/basketball2.jpg) no-repeat center;
+    background-size: cover;
+}
 
+/* page1 table */
+
+#tableOfActivities {
+    height: 60%;
+}
+
+#tableOfActivities table{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+
+}
+
+tbody {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.blue {
+    background-color: rgb(142, 209, 211);
+    color: white;
+}
+
+td {
+    width: 20%;
+    color: rgb(142, 209, 211);
+    border: 0.3px solid rgb(142, 209, 211);
+}
+
+#emptyCell {
+    border: none;
+}
+
+/* page 2 */
+
+#page2Text {
+    padding-top: 5%;
+}
+
+#page2 h1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#commActivities {
+    background-color: white;
+    height: 70%;
+}
+
+#page2 ul {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+}
+
+#commActivities h2 {
+    text-align: center;
+}
+
+#page2 li {
+    width: 30%;
+    border: solid 1px;
+}
