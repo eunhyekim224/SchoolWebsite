@@ -26,9 +26,18 @@
                                     <a href="#page2" class="menuLink">community service</a>
                                 </li>
                                 <li class="menuItem">
-                                    <a href="#page3" class="menuLink">homeroom service</a>
+                                    <a href="#page3Text" class="menuLink">homeroom service</a>
                                 </li>
                                 <li class="menuItem" id="divider"></li>
+                                <li class="menuItem">
+                                    <a href="./contact.html" class="menuLink">profile</a>
+                                </li>
+                                <li class="menuItem">
+                                    <a href="./contact.html" class="menuLink">courses & requirements</a>
+                                </li>
+                                <li class="menuItem">
+                                    <a href="./contact.html" class="menuLink">college counselling</a>
+                                </li>
                                 <li class="menuItem">
                                     <a href="./contact.html" class="menuLink">contact</a>
                                 </li>
@@ -46,13 +55,13 @@
                         </div>
                         <h1 class="letter" id="s2">S</h1>   
                 </div>
-                <p class="bottomArrow">
-                    <a href="#page1"><i class="fas fa-chevron-down fa-2x"></i></a>
-                </p>
             </section>
+            <p class="bottomArrow">
+                <a href="#page1"><i class="fas fa-chevron-down fa-2x"></i></a>
+            </p>
             <div id="pages">
                 <section class="page" id="page1">
-                    <article id="logo">
+                    <article class="logo">
                         <div>
                             <a href="./index.html"><img src="./images/logo.png" alt="spps_logo"/></a>
                         </div>
@@ -101,10 +110,8 @@
                                 </table>
                             </article>
                         </div>
-                    </div>
-                    
-                </section>
-    
+                    </div>                    
+                </section>  
                 <section class="page" id="page2">  
                     <article class="mainText" id="page2Text">
                         <h1>community service</h1>
@@ -112,10 +119,16 @@
                     </article>
                     <article id="commActivities">
                         <h2>School-Sponsored community service activities</h2>
-                        <ul>
+                        <ul id="page2List">
                             <li>"Shoes of Hope": Helping child labors in developing countries</li>
                             <li>"Daoom English library tutoring": for kids from low income families</li>
                             <li>"Constructing shelters for victims of natural disasters": to Korea and Philippines</li>
+                        </ul>
+                        <h3></h3>
+                        <ul id="page2Images">
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </article>
                 </section>
@@ -124,29 +137,43 @@
                         <h1>support for student life: homeroom system</h1>
                         <p>The SPPS homeroom system provides a strong network of support to make students feel connected and engaged while providing opportunities in leadership. Accomplishing various homeroom projects and competitions cooperatively throughout the year, each homeroom builds a unique identity that enhances a stronger sense of cohesion and belongingness to the communtiy</p>
                     </article>
-                    <article>
-                        <div id="circles">
-                            <ul>
-                                <li>homeroom</li>
-                                <li>communication</li>
-                                <li>security</li>
-                                <li>cooperation</li>
-                                <li>bonding</li>
-                                <li><img></li>
-                                <li><img></li>
-                                <li><img></li>
-                                <li><img></li>
-                            </ul>
-                        </div>
+                    <article id="circles">
+                        <!-- <div class="circleOutlines" id="biggest">
+                            <div class="circleOutlines" id="middle">
+                                <div class="circleOutlines" id="smallest">
+                                    <div class="circleOutlines" id="homeroom">HOMEROOM</div>
+                                </div>
+                            </div>         
+                        </div> -->
+                        <ul>
+                            <li>communication</li>
+                            <li>security</li>
+                            <li>cooperation</li>
+                            <li>bonding</li>
+                            <li><img></li>
+                            <li><img></li>
+                            <li><img></li>
+                            <li><img></li>
+                            <li>homeroom</li>
+                        </ul>                
                     </article>
                 </section>
-
                 <footer>
-                    <div id="footerLogo">
-                        <a href="./index.html"><img src="./images/logo.png" alt="spps_logo"/>Saint Paul Preparatory School</a>
+                    <div id="footerWrapper">
+                        <div class="logo" id="footerLogo">
+                            <div>
+                                <a href="./index.html"><img src="./images/logo.png" alt="spps_logo"/></a>
+                            </div>
+                            <p>Saint Paul Preparatory School</p>
+                        </div>
+                        <div id="details">
+                            <p>14-8, Seocho Jungangr-ro 31-gil, Seocho-gu, Seoul, Korea #06593</p>
+                            <p>Office: Tel) +82-2-3486-2000 / Fax)+82-2-3486-6789</p>
+                            <a href="./index.html">www.stpaulseoul.org</a>
+                        </div>
                     </div>
-                </footer>
-            </div>   
+                </footer>  
+            </div>
         </div>
     </body>
 </html>

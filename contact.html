@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Contact » Saint Paul Preparatory School</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="contactPage">
+            <header>
+                <article class="logo" id="contactLogo">
+                    <div>
+                        <a href="./index.html"><img src="./images/logo.png" alt="spps_logo"/></a>
+                    </div>
+                    <p>Saint Paul Preparatory School</p>
+                </article>
+                <nav>
+                    <div id="hamburger">
+                        <div class="nav">
+                            <div class="topBar"></div>
+                            <div class="middleBar"></div>
+                            <div class="bottomBar"></div>
+                        </div>
+                        <div class="menu">
+                            <ul  class="menuItems">
+                                <li class="menuItem">
+                                    <a href="./index.html#page1" class="menuLink">student life</a>
+                                </li>
+                                <li class="menuItem">
+                                    <a href="./index.html#page2" class="menuLink">community service</a>
+                                </li>
+                                <li class="menuItem">
+                                    <a href="./index.html#page3" class="menuLink">homeroom service</a>
+                                </li>
+                                <li class="menuItem" id="divider"></li>
+                                <li class="menuItem">
+                                    <a href="#" class="menuLink">profile</a>
+                                </li>
+                                <li class="menuItem">
+                                    <a href="#" class="menuLink">courses & requirements</a>
+                                </li>
+                                <li class="menuItem">
+                                    <a href="#" class="menuLink">college counselling</a>
+                                </li>
+                                <li class="menuItem">
+                                    <a href="./contact.html" class="menuLink">contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <section class="page" id="formAndMap">
+                <article id="mainForm">
+                    <h2>contact us</h2>
+                    <form method="post" action="contact.html" id="contactForm">
+                        <p>
+                            <label for="name">Your Name<span class="required">*</span></label><br>
+                            <input type="text" name="name" id="name">
+                        </p>
+                        <p>
+                            <label for="email">Your E-mail Address<span class="required">*</span></label><br>
+                            <input type="email" name="email" id="email">
+                        </p>
+                        <p>
+                            <label for="number">Phone Number</label><br>
+                            <input type="text" name="number" id="number">
+                        </p>
+                        <p>
+                            Leave us a comment:<span class="required">*</span><br>
+                            <textarea placeholder="No more than 250 characters" maxlength="250" width=" 229px" height="41px";></textarea>
+                        </p>
+                        <p> 
+
+                            <label for="reason">How did you hear about us? <span class="required">*</span></label><br>
+                            <select name="reason" id="reason">
+                                <option value="email from the school">Email from the school</option>
+                                <option value="social media">Social media</option>
+                                <option value="events">Events</option>
+                                <option value="word of mouth">Word of mouth</option>
+                                <option value="reputation">Reputation</option>
+                            </select>
+                        </p>
+                        <p id="otherReason"> 
+                            <label for="other">Other (please specify)</label><br>
+                            <input type="text" name="other" id="other">
+                        </p i>
+                        <p id="buttons">
+                            <input type="submit" value="Submit">
+                        </p>
+                    </form>
+                </article>
+                <article id="map">
+                    <h2>where to find us</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.3268326345496!2d127.00886831562048!3d37.50020897981043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca165a290337f%3A0xea0e037cf2fbf52a!2z7IS47J247Yq47Y-07ISc7Jq4IFNhaW50IFBhdWwgUHJlcGFyYXRvcnkgU2VvdWw!5e0!3m2!1sen!2suk!4v1581503068859!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </article>
+            </section>  
+        </div>   
+    </body>
+</html>
+
+

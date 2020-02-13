@@ -41,6 +41,7 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: -1;
 }
 
 header {
@@ -81,7 +82,7 @@ li {
     list-style-type: none;
 }
 
-/* arrow */
+/* ARROW */
 
 .bottomArrow {
     height: 10px;
@@ -110,10 +111,10 @@ li {
     }
 }
 
-/* hamburger and nav */
+/* MENU */
 
 #hamburger {
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -156,7 +157,6 @@ transition: none;
 
 .nav {
     padding: 20px;
-    z-index: 2; 
     position: absolute;
     /* so that it stays as an X when the menu slides in */
 }
@@ -176,6 +176,13 @@ transition: none;
 
 
 #hamburger > div.nav:hover ~ .menu {
+    top: -29px;
+    right: -30px;
+    animation: slideIn 2s;
+    visibility: visible;
+}
+
+.menu:hover {
     top: -29px;
     right: -30px;
     animation: slideIn 2s;
@@ -212,6 +219,10 @@ transition: none;
     letter-spacing: 2px;    
 }
 
+.menuItem a:hover {
+    color: rgba(240, 244, 245, 0.7);
+}
+
 #divider {
     border-bottom: 1px solid white;
     width: 1px;
@@ -220,7 +231,7 @@ transition: none;
 }
 
 
-/* page 1 */
+/* PAGE 1 */
 
 #pages {
     position: absolute;
@@ -237,7 +248,7 @@ transition: none;
     
 }
 
-#logo {
+.logo {
     margin: 0;
     padding: 0px 153px;
     height: 15%;
@@ -246,12 +257,12 @@ transition: none;
     justify-content: flex-start;
 }
 
-#logo div {
+.logo div {
     padding-top: 30px;
     float: left;
 }
 
-#logo p {
+.logo p {
     color: rgb(20, 20, 82);
     font-size: 2em;
     font-weight: bold;
@@ -260,7 +271,7 @@ transition: none;
     padding: 12px 30px;
 }
 
-#logo img {
+.logo img {
     height: 77px;
 }
 
@@ -326,7 +337,11 @@ transition: none;
     background-size: cover;
 }
 
-/* page1 table */
+#sportsImg:hover {
+    opacity: 0.6;
+}
+
+/* PAGE 1 TABLE */
 
 #tableOfActivities {
     height: 60%;
@@ -356,11 +371,23 @@ td {
     border: 0.3px solid rgb(142, 209, 211);
 }
 
+td:hover {
+    transform: rotateY(360deg);
+    transition: 2s;
+    color: white;
+    background-color:rgb(142, 209, 211) ;
+}
+
+table .blue:hover {
+    color: rgb(142, 209, 211);
+    background-color: white;
+}
+
 #emptyCell {
     border: none;
 }
 
-/* page 2 */
+/* PAGE 2 */
 
 #page2Text {
     padding-top: 5%;
@@ -376,10 +403,11 @@ td {
     height: 70%;
 }
 
-#page2 ul {
+#page2Images {
     display: flex;
-    justify-content: center;
-    height: 80%;
+    justify-content: space-around;
+    height: 65%;
+    padding-right: 39px;
 }
 
 #commActivities h2 {
@@ -388,5 +416,435 @@ td {
 
 #page2 li {
     width: 30%;
-    border: solid 1px;
+    font-size: 1.4em;
+}
+
+#page2List {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 39px;
+}
+
+#page2Images li:first-child {
+    background: url('https://www.ocregister.com/wp-content/uploads/2017/11/1112_nws_ocr-l-giving-07.jpg') center/cover no-repeat;
+}
+
+#page2Images li:nth-child(2) {
+    background: url('./images/teachingEnglish.jpeg') no-repeat -236px center/cover;
+}
+
+#page2Images li:last-child {
+    background: url('./images/makingShelters.jpg') no-repeat -198px center/cover;
+}
+
+
+#page2Images li:first-child:hover, #page2Images li:nth-child(2):hover, #page2Images li:last-child:hover {
+    opacity: 0.6;
+}
+
+/* PAGE 3 */
+
+#page3Text {
+    padding-top: 5%;
+    padding-bottom: 12px;
+}
+
+
+#circles {
+    height: 64%;
+    margin-bottom: 11px;
+}
+
+/* .circleOutlines {
+    border: 0.5px solid rgb(142, 209, 211);
+    border-radius: 50%;
+    padding: 100px;
+    margin: 93px;
+
+}
+
+#biggest {
+    width: 66%;
+    padding: 0;
+    margin: 0;
+    height: 33%;
+    position: absolute;
+    margin-top: -167px;
+    margin-left: 102px;
+}
+
+#middle {
+    margin: 0;
+    padding: 0;
+    height: 77%;
+    width: 71%;
+    margin-left: 150px;
+    margin-top: 104px;
+}
+
+#smallest {
+    margin: 0;
+    padding: 0;
+    height: 56%;
+    width: 53%;
+    margin-left: 157px;
+    margin-top: 152px;
+} */
+
+/* #homeroom {
+    margin: 0;
+    padding: 0;
+    height: 41%;
+    width: 41%;
+    margin-left: 113px;
+    margin-top: 108px;
+    background-color: rgb(142, 209, 211);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+} */
+
+/* CIRCLE ITEMS */
+
+#circles ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#circles li {
+    position: absolute;
+    border: 2px solid rgb(142, 209, 211);
+    color: rgb(142, 209, 211);
+    padding: 40px;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+#circles li:hover {
+    transform: scale(1.2);
+}
+
+#circles li:first-child {
+    top: 69px;
+    left: 657px;
+    animation: moveCircles 10s infinite;
+}
+
+#circles li:nth-child(2) {
+    top: 171px;
+    left: 19px;
+    animation: moveCircles3 10s infinite;
+}
+
+#circles li:nth-child(3) {
+    top: 306px;
+    left: 208px;
+    animation: moveCircles2 10s infinite;
+}
+
+#circles li:nth-child(4) {
+    top: 300px;
+    left: 839px;
+    animation: moveCircles2 10s infinite;
+}
+
+#circles li:nth-child(5) {
+    top: 106px;
+    left: 988px;
+    background: url('./images/circleItem1.jpg') center/cover no-repeat;
+    border: none;
+    animation: moveCircles3 10s infinite;
+
+}
+
+#circles li:nth-child(6) {
+    top: 291px;
+    left: 657px;
+    background: url('./images/circleItem2.jpg') center/cover no-repeat;
+    border: none;
+    animation: moveCircles 10s infinite;
+}
+
+#circles li:nth-child(7) {
+    top: 179px;
+    left: 341px;
+    background: url('./images/circleItem3.jpg') center/cover no-repeat;
+    border: none;
+    animation: moveCircles 10s infinite;
+}
+
+#circles li:nth-child(8) {
+    top: 69px;
+    left: 185px;
+    background: url('./images/circleItem4.jpg') center/cover no-repeat;
+    border: none;
+    animation: moveCircles2 10s infinite;
+}
+
+#circles li:nth-child(9) {
+    top: 177px;
+    left: 517px;
+    background-color: rgb(142, 209, 211);
+    color: white;
+}
+
+/* CIRCLES ANIMATION */
+
+@keyframes moveCircles {
+ 
+	from {
+		transform: rotate(0deg)
+		           translate(-20px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-20px) 
+		           rotate(-360deg);
+	}
+}
+
+@keyframes moveCircles2 {
+ 
+	from {
+		transform: rotate(0deg)
+		           translate(30px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(30px) 
+		           rotate(-360deg);
+	}
+}
+
+@keyframes moveCircles3 {
+ 
+	from {
+		transform: rotate(0deg)
+		           translate(-40px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-40px) 
+		           rotate(-360deg);
+	}
+}
+
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    position: absolute;
+    background-color: rgba(240, 244, 245, 0.7);
+}
+
+#footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+    background-color: white;
+    padding-right: 0;
+    margin: 0 10%;
+    width: 79.35%;
+    padding: 10px 0 11px 10px;
+}
+
+footer .logo {
+    margin: 0;
+    padding: 0px 153px;
+    height: 15%;
+    flex-direction: row;    
+    padding: 0;
+    flex-direction: row;
+}
+
+
+footer #details {
+    font-size: 1.2em;
+    padding-right: 15px;
+}
+
+footer #details a {
+    color: black;
+    font-size: 1.2em;
+}
+
+/* CONTACT */
+
+/* HEADER */
+
+#contactPage{
+    font-family: 'Oswald', sans-serif;
+    height: 100%;
+    background: url('./images/childeren3.png') center/cover no-repeat;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+   
+#contactLogo {
+    float: left;
+    padding-right: 695px;
+    flex-direction: row;
+    padding-right: 695px;
+}
+
+
+/* FORM and MAP */
+
+#formAndMap {
+    display: flex;
+    flex-direction: row;
+    height: 79%;
+    clear: both;
+    width: 77%;
+    background-color:rgba(240, 244, 245, 0.7);
+    margin-bottom: 19px;
+}
+
+#mainForm {
+    width: 50%;
+    height: 100%;  
+}
+
+#contactPage h2 {
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: lighter;
+    color: rgb(20, 20, 82);
+    margin-left: 116px;
+    margin-bottom: 0;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.2em;
+    padding-left: 69px;
+}
+
+.required {
+    color: red;
+}
+
+#contactForm p {
+    padding: 14px;
+    margin: 0;
+}
+
+#contactForm input, #contactForm textarea, #contactForm select {
+    width: 229px;
+}
+
+#contactForm input {
+    height: 18px;
+}
+
+#contactForm textarea {
+    height: 41px;
+}
+
+#contactForm #buttons input {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border: solid 0.3px grey;
+
+}
+
+iframe {
+    padding-top: 61px;
+    margin-right: 48px;
+}
+
+
+/* MEDIA QUERY FOR IPHONE X */
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) {
+
+    body {
+        width: 150%;
+        background-color: rgb(142, 209, 211) ;
+    }
+
+    #allSections {
+        height: auto;
+    }
+
+
+    #bottomArrow, table, #flex2Page1, #homepage, #circles, .menu {
+        display: none;
+    }
+
+    #pages {
+        position: relative;
+        top: 0;
+        background-color: transparent;
+    }
+
+    .page {
+        font-size: 1.7em;
+        height: auto;
+    }
+
+    .logo {
+        height: 4%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav {
+        position: absolute;
+        border-color: rgb(10, 10, 70);
+        left: -845px;
+        top: 50px;
+    }
+
+    #flexPage1 {
+        padding-top: 0;
+    }
+   
+    .menuItems {
+        display: flex;
+    }
+
+    /* .menu {
+        top: -45px;
+        left: 45px;
+        visibility: visible;
+        height: 800px;
+    } */
+
+    #page1 .mainText {
+        width: 100%;
+        height: 35%;
+    }
+
+    footer {
+        background-color:transparent;
+    }
+
+    
+
+
 }
