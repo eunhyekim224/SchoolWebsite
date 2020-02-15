@@ -60,6 +60,9 @@ header:hover ~ #homepage {
 #letters {
     padding-top: 50px;
     width: 60%;
+    position: absolute;
+    left: -803px;
+    animation: letterSlide 2s forwards;
 }
 
 .letter {
@@ -67,8 +70,18 @@ header:hover ~ #homepage {
     font-weight: normal;
     font-size: 16em;
     color: white; 
-    margin: 0px 82px;
+    margin: 0px 82px; 
 }
+
+@keyframes letterSlide {
+    from {
+        left: -803px;
+    }
+    to {
+        left: 0px;
+    }   
+}
+
 
 .p {
     display: flex;
@@ -87,7 +100,7 @@ li {
 .bottomArrow {
     height: 10px;
     width: 80%;
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     left: 20%;
     display: flex;
@@ -166,6 +179,7 @@ transition: none;
     flex-direction: column;
     padding-top: 60px;
 }
+
 .menu {
     position: absolute;
     background-color: rgba(17, 16, 16, 0.7);
@@ -176,13 +190,6 @@ transition: none;
 
 
 #hamburger > div.nav:hover ~ .menu {
-    top: -29px;
-    right: -30px;
-    animation: slideIn 2s;
-    visibility: visible;
-}
-
-.menu:hover {
     top: -29px;
     right: -30px;
     animation: slideIn 2s;
@@ -333,8 +340,7 @@ transition: none;
 #sportsImg {
     width: 100%;
     height: 70%;
-    background: url(./images/basketball2.jpg) no-repeat center;
-    background-size: cover;
+    background: url('./images/basketball2.jpg') no-repeat center/cover;
 }
 
 #sportsImg:hover {
@@ -373,9 +379,14 @@ td {
 
 td:hover {
     transform: rotateY(360deg);
-    transition: 2s;
+    transition: 1s;
     color: white;
     background-color:rgb(142, 209, 211) ;
+}
+
+#emptyCell:hover {
+    transform: none;
+    background-color: white;
 }
 
 table .blue:hover {
@@ -706,6 +717,10 @@ footer #details a {
     padding-right: 695px;
 }
 
+#contactNav {
+    float: right;
+}
+
 
 /* FORM and MAP */
 
@@ -834,6 +849,7 @@ and (max-device-width : 812px) {
         visibility: visible;
         height: 800px;
     } */
+
 
     #page1 .mainText {
         width: 100%;
