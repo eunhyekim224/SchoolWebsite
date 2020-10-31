@@ -1,1 +1,1 @@
-# schoolwebsite
+# School Website Example
